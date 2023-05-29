@@ -1,26 +1,32 @@
 <?php
-    /**
-     * *Funciones de salida
-     * *todo lo que se imprime va directamente a la pagina
-     */
+/**
+ **Variables y constantes
+ **se usa el simbolo $ seguido del nombre
+ ** la declaracion estricta asigna el tipo de variable en parentesis despues de el igual y despues de estos el valor de la variable 
+ */
 
-     /**
-      * *echo fues la mas comun
-      */
-     echo 'Texto a imprimir </br>';
+/* numerica */
+$edad = 25;
 
-     /**
-      ** print solo puede imprimir una cadena de texto a la vez 
-      ** El marcador %s lo que hace es que ahi se va a colocar lo que siga en la siguiente coma dependiendo cuantos de estos marcadores haya
-      */
-    $texto = 'Mundo';
-    printf('Hola %s', $texto);
+/* Declarar una variable de texto */
+$nombre = 'Juan';
 
-    /* sprintf es similar a printf pero no imprime sino que asigna a una variable, es decir retorna */
+/* Declarar una variable booleana */
+$es_valido = true;
+echo var_dump($nombre);
+/* vardump devuelve el tipo de variable y su magnitud */
 
-    $texto = 'Mundo';
-    $mensaje = sprintf('Hola %s', $texto);
-    echo $mensaje;
+/**
+ ** Declarar una constante numercia 
+ ** Para declarar una constante se utiliza el define, entre parentesis va el nombre de la variable seguido por coma y el valor
+ */
 
-    
+ /* numerica */
+ define('PI', 3.14159264);
+
+ /* texto */
+ define('SALUDO', 'Hola mundo');
+
+ /* Declarar una constante booleana */
+ define('ES_VALIDO', true);
 ?>
