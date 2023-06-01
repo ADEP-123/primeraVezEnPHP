@@ -56,6 +56,8 @@ echo "<hr>";
 $personas['Pedro']['Altura'] = 1.63;
 print_r($personas);
 
+echo "-------METODOS DE ARRAY--------
+";
 /**
  * Metodos de array
  * @var array flip Intercambia las claves con sus valores correspondientes en un array. 
