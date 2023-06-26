@@ -22,3 +22,25 @@ $nums = array(7, 5, 9, 12, 3);
 
 // Llamada a la función
 calcularPromedio($nums);
+/**
+ * ? Funciones que retornan valor
+ */
+// Definición de la función que retorna un valor
+function calcularPromedio2($numeros) {
+    // Calcula el promedio de los números en el array
+    $suma = array_sum($numeros);
+    $cantidad = count($numeros);
+    $promedio = $suma / $cantidad;
+
+    // Retorna el promedio
+    return $promedio;
+}
+
+// Array de números
+$nums = array(7, 5, 9, 12, 3);
+
+// Llamada a la función y almacenamiento del resultado en una variable
+$promedioCalculado = calcularPromedio2($nums);
+
+// Imprime el resultado obtenido
+echo "El promedio de los números es: " . $promedioCalculado;
