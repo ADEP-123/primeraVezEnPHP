@@ -60,9 +60,16 @@ class Persona
 $persona = new Persona("Juan", 30);
 
 /**
- * ? 1.2 Atributos
+ * ? 1.3 Atributos
  * * Propiedades o características de un objeto. Definen el estado de un objeto y se representan mediante variables en la clase.
  */
-// Acceder a los Atributos instancia
+// Acceder a los Atributos de la instancia
 echo "Nombre: " . $persona->getNombre() . "<br>";
 echo "Edad: " . $persona->getEdad() . "<br>";
+
+/**
+ * ? 1.4 Metodos
+ * * Acciones o comportamientos que un objeto puede realizar. Representan las operaciones que pueden realizarse con un objeto y se definen como funciones en la clase.
+ */
+// Acceder a los metodos de la instancia
+$persona->saludar();
