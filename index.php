@@ -51,3 +51,10 @@ class Persona
         echo "¡Hola, soy " . $this->nombre . "!";
     }
 }
+
+/**
+ * ? 1.2 Objeto
+ * * Instancia de una clase. Representa un individuo o entidad específica y tiene sus propias propiedades y comportamientos.
+ */
+// Crear una instancia de la clase Persona
+$persona = new Persona("Juan", 30);
