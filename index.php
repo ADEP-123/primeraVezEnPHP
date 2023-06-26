@@ -72,3 +72,17 @@ switch ($opcion) {
         echo "Opción no válida.";
         break;
 }
+/**
+ * ? 2. Estructuras repetitivas: permiten repetir la ejecución de un bloque de código varias veces
+ * ? 2.1. While 
+ */
+$contador = 1;
+
+// Mientras el contador sea menor o igual a 5, se ejecuta el bucle
+while ($contador <= 5) {
+    // Imprime el valor actual del contador
+    echo "El valor del contador es: " . $contador . "<br>";
+
+    // Incrementa el contador en 1 para la próxima iteración
+    $contador++;
+}
