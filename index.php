@@ -79,3 +79,42 @@ $persona->saludar();
  * * Principio que establece que los atributos y métodos relacionados deben agruparse en una clase para ocultar los detalles internos y exponer solo una interfaz pública.
  */
 // la clase Persona tiene dos propiedades privadas: $nombre y $edad. Esto significa que estas propiedades solo pueden ser accedidas o modificadas desde dentro de la propia clase.
+
+/**
+ * ? 1.6 Herencia
+ * * Mecanismo que permite crear nuevas clases basadas en clases existentes. La clase que se utiliza como base se denomina "clase padre" o "superclase", y la clase que se deriva se llama "clase hija" o "subclase" se hace uso de la palabra reservada extends.
+ */
+class Estudiante extends Persona
+{
+    // Propiedades adicionales
+    private $grado;
+
+    // Constructor del Estudiante
+    public function __construct($nombre, $edad, $grado)
+    {
+        // Llama al constructor de la clase padre (Persona)
+        parent::__construct($nombre, $edad);
+        $this->grado = $grado;
+    }
+
+    // Método getter para obtener el grado
+    public function getGrado()
+    {
+        return $this->grado;
+    }
+
+    // Método setter para establecer el grado
+    public function setGrado($grado)
+    {
+        $this->grado = $grado;
+    }
+}
+
+// Crear una instancia de la clase Estudiante
+$estudiante = new Estudiante("Juan", 18, "12vo grado");
+
+// Acceder a las propiedades y métodos de la instancia Estudiante
+echo "Nombre: " . $estudiante->getNombre() . "<br>";
+echo "Edad: " . $estudiante->getEdad() . "<br>";
+echo "Grado: " . $estudiante->getGrado() . "<br>";
+$estudiante->saludar();
