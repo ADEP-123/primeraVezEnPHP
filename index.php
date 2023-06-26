@@ -1,31 +1,25 @@
 <?php
+
 /**
- * ? ISSET y EMPTY
- * @ISSET verifica si la variable existe y tiene valor
- * "EMPTY verifica si la variable esta vacia o no definida
+ * ? Estructuras de control
+ * * se tuilizan para controlar el flujo de ejecucion de un programa
+ * ? 1. Condicionales 
+ * ? 1.1. IF: permite tomar decisiones en función de si se cumple o no una determinada condición.
  */
-$nombre = 'John Doe';
-if (isset($nombre)) {
-    echo "La variable 'nombre' está definida y tiene un valor.";
+$numero = 10;
+
+// Verifica si el número es mayor que cero
+if ($numero > 0) {
+    echo "El número es mayor que cero.";
 } else {
-    echo "La variable 'nombre' no está definida o no tiene un valor.";
+    echo "El número no es mayor que cero.";
 }
 
 echo "<br>";
 
-
-$edad = null;
-if (isset($edad)) {
-    echo "La variable 'edad' está definida y tiene un valor.";
+// Verifica si el número es par
+if ($numero % 2 == 0) {
+    echo "El número es par.";
 } else {
-    echo "La variable 'edad' no está definida o no tiene un valor.";
-}
-
-echo "<br>";
-
-$email = '';
-if (empty($email)) {
-    echo "La variable 'email' está vacía o no definida.";
-} else {
-    echo "La variable 'email' no está vacía y tiene un valor.";
+    echo "El número es impar.";
 }
