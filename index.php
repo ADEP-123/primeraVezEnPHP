@@ -24,6 +24,31 @@ if ($numero % 2 == 0) {
     echo "El número es impar.";
 }
 /**
+ * ? 1.1.2 IF anidado
+ */
+$edad = 25;
+$genero = 'femenino';
+
+if ($edad >= 18) {
+    // Si la edad es mayor o igual a 18, se ejecuta este bloque de código
+    echo "Eres mayor de edad.";
+
+    if ($genero == 'masculino') {
+        // Si el género es masculino, se ejecuta este bloque de código
+        echo " Eres un hombre mayor de edad.";
+    } elseif ($genero == 'femenino') {
+        // Si el género es femenino, se ejecuta este bloque de código
+        echo " Eres una mujer mayor de edad.";
+    } else {
+        // Si no se especifica el género, se ejecuta este bloque de código
+        echo " Eres mayor de edad, pero no se ha especificado tu género.";
+    }
+} else {
+    // Si la edad es menor a 18, se ejecuta este bloque de código
+    echo "Eres menor de edad.";
+}
+
+/**
  * ? 1.2. Switch ermite ejecutar diferentes bloques de código dependiendo del valor de una variable.
  */
 $opcion = 2;
