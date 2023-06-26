@@ -23,3 +23,10 @@ $json = json_encode($datos);
 
 // Imprime el resultado
 echo $json;
+
+/**
+ * ? 2. json_decode()
+ * * Se utiliza para convertir una cadena JSON en una estructura de datos de PHP.
+ */
+$json = json_decode($json);
+var_dump($json);
