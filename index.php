@@ -108,6 +108,16 @@ class Estudiante extends Persona
     {
         $this->grado = $grado;
     }
+
+    /**
+     * ? 1.7 Polimorfismo
+     * * Capacidad de un objeto de tomar diferentes formas o comportarse de diferentes maneras según el contexto.
+     */
+    // Método personalizado para el estudiante
+    public function estudiar()
+    {
+        echo "Estoy estudiando para mis exámenes.";
+    }
 }
 
 // Crear una instancia de la clase Estudiante
