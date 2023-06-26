@@ -1,39 +1,53 @@
 <?php
 
 /**
- * ? Json_encode y json_decode
- * * Son funciones que se utilizan para incluir archivos externos en un programa.
- * ? 1. json_encode()
- * * Se utiliza para convertir una estructura de datos en PHP en una cadena JSON.
+ * ? POO
+ * * Paradigma de programación que se basa en el concepto de "objetos". Los objetos son entidades que representan conceptos del mundo real y que pueden tener propiedades (atributos) y realizar acciones (métodos).
+ * ? 1. Conceptos basicos
+ * ? 1.1 Clase
+ * * plantilla o definición que describe las características y comportamientos de los objetos que se pueden crear a partir de ella
  */
-// Array
-$datos = array(
-    'nombre' => 'Juan',
-    'edad' => 30,
-    'hobbies' => array('fútbol', 'tenis', 'guitarra'),
-    'direccion' => array(
-        'calle' => 'Avenida Principal',
-        'numero' => 123,
-        'ciudad' => 'Ciudad de Ejemplo'
-    )
-);
+// Definición de la clase Persona
+class Persona
+{
+    // Propiedades
+    private $nombre;
+    private $edad;
 
-// Convierte el array en formato JSON
-$json = json_encode($datos);
+    // Constructor
+    public function __construct($nombre, $edad)
+    {
+        $this->nombre = $nombre;
+        $this->edad = $edad;
+    }
 
-// Imprime el resultado
-echo $json;
+    // Método getter para obtener el nombre
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
 
-/**
- * ? 2. json_decode()
- * * Se utiliza para convertir una cadena JSON en una estructura de datos de PHP.
- */
-// $json = json_decode($json);
-// var_dump($json);
+    // Método setter para establecer el nombre
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+    }
 
-/**
- * ? 2.1 json_decode(,true)
- * * En caso de que se desee manipular el objeto de tipo PHP como un arreglo asociativo se puede agregar un segundo argumento en la función json-decode La cual es un valor booleano; en caso de que se le pase un valor true la función retornará un arreglo de tipo asociativo
- */
-$json = json_decode($json, true);
-var_dump($json);
+    // Método getter para obtener la edad
+    public function getEdad()
+    {
+        return $this->edad;
+    }
+
+    // Método setter para establecer la edad
+    public function setEdad($edad)
+    {
+        $this->edad = $edad;
+    }
+
+    // Método personalizado
+    public function saludar()
+    {
+        echo "¡Hola, soy " . $this->nombre . "!";
+    }
+}
