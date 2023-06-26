@@ -1,46 +1,19 @@
 <?php
 
 /**
- * ? Functiones definidas por el usuario
- * * las funciones definidas por el usuario son bloques de código que se pueden llamar y ejecutar en cualquier parte de un programa para realizar una tarea específica
- * ? 1. Funciones que no retornan valor(VOID)
- * * En PHP, se puede definir una función de void utilizando la palabra clave void en lugar de especificar un tipo de retorno
+ * ? include, require, include_once, require_once
+ * * Son funciones que se utilizan para incluir archivos externos en un programa.
+ * ? 1. include e include_once
+ * * Permiten incluir un archivo PHP en el programa. La diferencia entre ellas es que include puede incluir el mismo archivo varias veces mientras que include_once asegura que el archivo solo se incluya una vez en el programa.
  */
-// Definición de la función void
-function calcularPromedio($numeros) {
-    // Calcula el promedio de los números en el array
-    $suma = array_sum($numeros);
-    $cantidad = count($numeros);
-    $promedio = $suma / $cantidad;
+// Incluye el archivo "funciones.php" una sola vez
+include_once 'funciones.php';
 
-    // Imprime el promedio
-    echo "El promedio de los números es: " . $promedio;
-}
+// Llama a la función saludar()
+saludar();
 
-// Array de números
-$nums = array(7, 5, 9, 12, 3);
+// Accede a la variable $nombre definida en "funciones.php"
+echo "El nombre es: " . $nombre;
 
-// Llamada a la función
-calcularPromedio($nums);
-/**
- * ? Funciones que retornan valor
- */
-// Definición de la función que retorna un valor
-function calcularPromedio2($numeros) {
-    // Calcula el promedio de los números en el array
-    $suma = array_sum($numeros);
-    $cantidad = count($numeros);
-    $promedio = $suma / $cantidad;
-
-    // Retorna el promedio
-    return $promedio;
-}
-
-// Array de números
-$nums = array(7, 5, 9, 12, 3);
-
-// Llamada a la función y almacenamiento del resultado en una variable
-$promedioCalculado = calcularPromedio2($nums);
-
-// Imprime el resultado obtenido
-echo "El promedio de los números es: " . $promedioCalculado;
+// Crea una instancia de la clase MiClase definida en "funciones.php"
+$objeto = new MiClase();
