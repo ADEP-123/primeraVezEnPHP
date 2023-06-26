@@ -109,3 +109,14 @@ for ($i = 1; $i <= 5; $i++) {
     // Imprime el valor actual de la variable $i
     echo "El valor actual de i es: " . $i . "<br>";
 }
+/**
+ * ? 2.4 For-each: se utiliza para iterar sobre elementos de un array o una colección de objetos 
+ */
+// Un array de nombres
+$nombres = array("Juan", "María", "Pedro", "Ana");
+
+// Itera sobre cada elemento del array
+foreach ($nombres as $nombre) {
+    // Imprime cada nombre
+    echo "Nombre: " . $nombre . "<br>";
+}
