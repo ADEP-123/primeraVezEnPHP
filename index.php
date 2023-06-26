@@ -100,3 +100,12 @@ do {
     // Incrementa el contador en 1 para la próxima iteración
     $contador++;
 } while ($contador <= 5);
+
+/**
+ * ? 2.3 for: permite repetir la ejecución de un bloque de código un número fijo de veces,.
+ */
+// Itera 5 veces, comenzando desde 1 y aumentando en 1 en cada iteración
+for ($i = 1; $i <= 5; $i++) {
+    // Imprime el valor actual de la variable $i
+    echo "El valor actual de i es: " . $i . "<br>";
+}
