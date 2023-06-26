@@ -86,3 +86,17 @@ while ($contador <= 5) {
     // Incrementa el contador en 1 para la próxima iteración
     $contador++;
 }
+
+/**
+ * ? 2.2 do-while: similar al bucle while, pero garantiza que el bloque de código se ejecuta al menos una vez, independientemente de si se cumple o no la condición.
+ */
+$contador = 1;
+
+// Este bucle siempre se ejecutará al menos una vez
+do {
+    // Imprime el valor actual del contador
+    echo "El valor del contador es: " . $contador . "<br>";
+
+    // Incrementa el contador en 1 para la próxima iteración
+    $contador++;
+} while ($contador <= 5);
