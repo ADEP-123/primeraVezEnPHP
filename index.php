@@ -58,3 +58,11 @@ class Persona
  */
 // Crear una instancia de la clase Persona
 $persona = new Persona("Juan", 30);
+
+/**
+ * ? 1.2 Atributos
+ * * Propiedades o características de un objeto. Definen el estado de un objeto y se representan mediante variables en la clase.
+ */
+// Acceder a los Atributos instancia
+echo "Nombre: " . $persona->getNombre() . "<br>";
+echo "Edad: " . $persona->getEdad() . "<br>";
