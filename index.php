@@ -73,3 +73,9 @@ echo "Edad: " . $persona->getEdad() . "<br>";
  */
 // Acceder a los metodos de la instancia
 $persona->saludar();
+
+/**
+ * ? 1.5 Encapsuladmiento
+ * * Principio que establece que los atributos y métodos relacionados deben agruparse en una clase para ocultar los detalles internos y exponer solo una interfaz pública.
+ */
+// la clase Persona tiene dos propiedades privadas: $nombre y $edad. Esto significa que estas propiedades solo pueden ser accedidas o modificadas desde dentro de la propia clase.
