@@ -174,3 +174,49 @@ class Perro extends Animal
 // Crear una instancia de la clase Perro y llamar al método hacerSonido()
 $perro = new Perro("Max");
 $perro->hacerSonido();
+
+/**
+ * ? 1.8 Interfaces
+ * * Es un contrato que especifica qué métodos debe proporcionar una clase sin especificar cómo se implementan esos métodos
+ */
+// Definición de la interfaz Vehiculo
+interface Vehiculo
+{
+    // Método para obtener el tipo de vehículo
+    public function getTipoVehiculo();
+
+    // Método para obtener la velocidad máxima del vehículo
+    public function getVelocidadMaxima();
+}
+
+// Definición de la clase Automovil que implementa la interfaz Vehiculo
+class Automovil implements Vehiculo
+{
+    // Propiedades
+    private $tipo;
+    private $velocidadMaxima;
+
+    // Constructor
+    public function __construct($tipo, $velocidadMaxima)
+    {
+        $this->tipo = $tipo;
+        $this->velocidadMaxima = $velocidadMaxima;
+    }
+
+    // Implementación del método getTipoVehiculo() de la interfaz Vehiculo
+    public function getTipoVehiculo()
+    {
+        return $this->tipo;
+    }
+
+    // Implementación del método getVelocidadMaxima() de la interfaz Vehiculo
+    public function getVelocidadMaxima()
+    {
+        return $this->velocidadMaxima;
+    }
+}
+
+// Crear una instancia de la clase Automovil y utilizar los métodos de la interfaz Vehiculo
+$automovil = new Automovil("Sedán", 200);
+echo "Tipo de vehículo: " . $automovil->getTipoVehiculo() . "<br>";
+echo "Velocidad máxima: " . $automovil->getVelocidadMaxima();
