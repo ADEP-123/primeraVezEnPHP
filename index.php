@@ -118,6 +118,15 @@ class Estudiante extends Persona
     {
         echo "Estoy estudiando para mis exámenes.";
     }
+
+    /**
+     * ? 1.6 Metodos estaticos
+     * * Método que pertenece a la clase en sí y no a una instancia específica de la clase. A diferencia de los métodos de instancia, los métodos estáticos se pueden llamar directamente en la clase sin necesidad de crear un objeto o instancia de la misma
+     */
+    public static function graduarse()
+    {
+        echo "El estudiante se ha graduado";
+    }
 }
 
 // Crear una instancia de la clase Estudiante
@@ -128,3 +137,6 @@ echo "Nombre: " . $estudiante->getNombre() . "<br>";
 echo "Edad: " . $estudiante->getEdad() . "<br>";
 echo "Grado: " . $estudiante->getGrado() . "<br>";
 $estudiante->saludar();
+
+//Llamar al metodo estatico
+Estudiante::graduarse();
