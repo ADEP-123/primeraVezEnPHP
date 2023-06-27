@@ -1,9 +1,11 @@
 <?php
 
 /**
- * ? Operadores logicos
- * * AND: SELECT * FROM nombre WHERE condicion1 AND condicion2; Esta consulta devuelve los registros de la tabla nombre donde se cumplen ambas condiciones
- * * OR:  SELECT * FROM nombre WHERE condicion1 OR condicion2; Esta consulta devuelve los registros de la tabla nombre donde se cumple algunade las condiciones
- * * NOT: SELECT * FROM nombre WHERE NOT condicion1; Esta consulta devuelve los registros donde NO se cumple la condicion
+ * ? Operadores de comparacion
+ * * SELECT * FROM nombre WHERE columna1 = A; esta consulta devuelve los registros donde el valor de la columna1 en la tabla nombre es A
+ * * SELECT * FROM nombre WHERE columna1 <> A; esta constula devuelve los registros donde el valor de la columna1 en la tabla nombre no es igual a A
+ * * SELECT * FROM nombre WHERE columna1 >= A; esta constula devuelve los registros donde el valor de la columna1 en la tabla nombre es mayor o igual a A
+ * * SELECT * FROM nombre WHERE columna1 <= A; esta constula devuelve los registros donde el valor de la columna1 en la tabla nombre es menor o igual a A
+ * * SELECT * FROM nombre WHERE columna1  BETWEEN a AND b; esta constula devuelve los registros donde el valor de la columna1 en la tabla nombre esta esntre a y b
  */
 
