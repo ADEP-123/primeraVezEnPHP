@@ -140,3 +140,37 @@ $estudiante->saludar();
 
 //Llamar al metodo estatico
 Estudiante::graduarse();
+
+/**
+ * ? 1.7 Clases abstractas
+ * * Una clase abstracta es una clase que no se puede instanciar directamente, sino que sirve como una plantilla o base para otras clases
+ */
+// Definición de la clase abstracta Animal
+abstract class Animal
+{
+    // Propiedad protegida
+    protected $nombre;
+
+    // Constructor
+    public function __construct($nombre)
+    {
+        $this->nombre = $nombre;
+    }
+
+    // Método abstracto que debe ser implementado por las clases hijas
+    abstract public function hacerSonido();
+}
+
+// Definición de la clase Perro que hereda de Animal
+class Perro extends Animal
+{
+    // Implementación del método abstracto hacerSonido()
+    public function hacerSonido()
+    {
+        echo "El perro hace: ¡Guau guau!";
+    }
+}
+
+// Crear una instancia de la clase Perro y llamar al método hacerSonido()
+$perro = new Perro("Max");
+$perro->hacerSonido();
