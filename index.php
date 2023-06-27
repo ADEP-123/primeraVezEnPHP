@@ -233,4 +233,12 @@ spl_autoload_register(function ($className) {
     }
 });
 // Crear una instancia de la clase MiClase
+// $miClase = new MiClase();
+
+/**
+ * ? 1.10 Namespaces
+ * * Técnica que permite cargar automáticamente las clases cuando son necesarias, sin tener que incluir manualmente los archivos de clase en cada punto del código
+ */
+use MiApp\MiClase;
 $miClase = new MiClase();
+$miClase->saludar();
