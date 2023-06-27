@@ -2,19 +2,29 @@
 
 /**
  * ? PHP Y MSQL
- * ? Bases de datos relacionales
- * * Son un tipo de sistema de gestión de bases de datos (SGBD) que organiza la información en tablas estructuradas y establece relaciones entre ellas
- * * Las bases de datos relacionales se basan en el lenguaje de consulta estructurado (SQL, por sus siglas en inglés) para interactuar con los datos. SQL proporciona un conjunto de comandos y sentencias para realizar consultas, inserciones, actualizaciones y eliminaciones de datos en la base de datos
- * ? Entidades
- * * Categorías de cosas que son importantes para un negocio y sobre las que se debe conservar información
- * ? Atributos
- * * Las entidades contienen datos e información que el negocio debe conocer y recordar
- * ? Identificadores unicos
- * * Un identificador único es un atributo o conjunto de atributos que permite identificar de manera exclusiva cada registro en una tabla. Su función principal es garantizar la integridad y la unicidad de los datos almacenados.
- * ? Relaciones
- * * Representa las reglas de negocio que enlazan entidades. Cada relación siempre tiene dos reglas de negocio, por ejemplo un departamento puesde tener uno o varios municipios mientras que a cada municipio se le debe asignar un unico departamento
- * ? Clave ajena o foranea
- * * Son atributos o conjuntos de atributos que se utilizan para establecer relaciones entre dos tablas en una base de datos relacional. Estas claves foráneas permiten mantener la integridad referencial y establecer la conexión entre los registros de diferentes tablas.
- *  ? Normalizacion de la base de datos
- * * Proceso de diseño que se utiliza para organizar y estructurar las tablas de una base de datos relacional de manera eficiente y libre de redundancias. El objetivo principal de la normalización es eliminar la duplicación de datos y garantizar la integridad y consistencia de la información almacenada
+ * ? Tipos de datos en MSYQL
+ * ? -Tipos de enteros
+ * * TINYINT: ocupa 1 byte pero tiene un valor maximo de mas o menos 128
+ * * BIT (BOOL, BOOLEAN): Numero entero con valor de 0 o 1
+ * * SMALLINT: ocupa 2 bytes y puede ir hasta mas o menos 32768
+ * * MEDIUMINT: ocupa 3 bytes puede ir hasta mas o menos 8388608
+ * * INT: ocupa 4 bytes puede ir hasta mas o menos 2147483648
+ * * BIGINT: ocupa 8 bytes y puede ir hasta mas o menos 9223372036854775808
+ * ? Tipos de datos en coma flotante
+ * * FLOAT(m,d): contiene un numeroi en coma flotante de precision sencilla, el valor m es la anchira y d es el numero de decimales
+ * * DOUBLE(m,d): Contiene un numero en coma flotante de precision doble. Igual que FLOAT la diferencia es el rango de valores posibles
+ * * DECIMAL(m,[d]): Se usan para guardar valores para los que es importante preservar una preciison exacta, por ejemplo con datos monetarios. Si se omite d el valor por defecto es 0, los valores no tendran punto decimal ni decimales.
+ * ? Tipos de datos caracter
+ * * CHAR(M) Los valores validos para m son de . a 255, contiene una cadena de longitud constante para mantener la longitud d ela cadena, se rellena a la derecha con espacios. Estos espacios se eliminan al recuperar el valor
+ * * VARCHAR(M) Los valores validos para M son de 0 a 255 caracteres, contiene una cadena de longitud variable. Los espacios al final se seliminan
+ * * BLOB: Una longitud maxima de 65535 caracteres valido para objetos binarios como imagenes, ficheros de texto, audio o video
+ * * TEXT: Una longitud maxima de 65535 caracteres sirve para almacenar texto plano sin formato
+ * * TINYBLOB Y TINYTEXT Longitud maxima de 255 caracteres
+ * * MEDIUMBLOB Y MEDIUMTEXT Longitud maxima de 16777215 caracteres
+ * * LONGBLOB Y LONGTEXT Longitud maxima de 4294967298 caracteres
+ * ? Tipos de dato Fecha
+ * * DATE: valido para almacenar una fecha con año mes y dia su rango oscila entre "1000-01-01" y "9999-12-31" Formato(AAAA-MM-DD)
+ * * DATETIME: Almacena una fecha y una hora su rango oscila entre "1000-01-01 00:00:00" y "9999-12-31 23:59:59" Formato(AAAA-MM-DD HH:MM:SS)
+ * * TIME: Almacena una hora el rango esta entre "-838:59:59" y "838:59:59" Formato(HH:MM:SS)
+ * * TIMESTAMP Almacena una fecha y hora UTC rango entre "1970:01:01 00:00:00" y algun momento del año 2037 Formato(AAAA-MM_DD HH:MM:SS)
  */
