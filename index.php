@@ -220,3 +220,17 @@ class Automovil implements Vehiculo
 $automovil = new Automovil("Sedán", 200);
 echo "Tipo de vehículo: " . $automovil->getTipoVehiculo() . "<br>";
 echo "Velocidad máxima: " . $automovil->getVelocidadMaxima();
+
+/**
+ * ? 1.9 Autoload
+ * * Técnica que permite cargar automáticamente las clases cuando son necesarias, sin tener que incluir manualmente los archivos de clase en cada punto del código
+ */
+// Definición de la función autoload
+spl_autoload_register(function ($className) {
+    $filePath = __DIR__ . '/' . $className . '.php';
+    if (file_exists($filePath)) {
+        require_once $filePath;
+    }
+});
+// Crear una instancia de la clase MiClase
+$miClase = new MiClase();
